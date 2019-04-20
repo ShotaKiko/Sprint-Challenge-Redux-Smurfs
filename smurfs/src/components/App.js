@@ -10,7 +10,13 @@ import ViewVillage from './ViewVillage';
  */
 class App extends Component {
   render() {
-    return <ViewVillage />;
+    return(
+      <div>
+        <h1>Smurf Village</h1>
+        <ViewVillage />
+        
+      </div>
+    )
   }
 }
 

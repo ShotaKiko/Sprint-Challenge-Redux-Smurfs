@@ -12,17 +12,17 @@ export const fetchSmurfList = () => dispatch => {
   dispatch({ type: FETCH_SMURFS_START })
   axios
     .get('http://localhost:3333/smurfs')
-    .then(({ data }) => dispatch({ type: FETCH_SMURFS_SUCCESS, payload: data }))
+    .then(res => dispatch({ type: FETCH_SMURFS_SUCCESS, payload: res.data }))
     .catch( err => dispatch ({ type: FETCH_SMURFS_FAILURE, payload: err }))
 }
 
-// export const addNewSmurf = () => dispatch => {
-//     dispatch({ type: POST_SMURF_START })
-//     axios
-//       .post('http://localhost:3333/smurfs', payload)
-//       .then(res => dispatch({ type: POST_SMURF_SUCCESS, payload: res.data }))
-//       .catch(err => dispatch({ type: POST_SMURF_FAILURE, payload: err }));
-// }
+export const addSmurf = (traits) => dispatch => {
+    dispatch({ type: POST_SMURF_START })
+    axios
+      .post('http://localhost:3333/smurfs', traits)
+      .then(res => dispatch({ type: POST_SMURF_SUCCESS, payload: res.data }))
+      .catch(err => dispatch({ type: POST_SMURF_FAILURE, payload: err }));
+}
 
 
 
