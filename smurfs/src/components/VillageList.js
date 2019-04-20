@@ -4,12 +4,13 @@ import Smurf from "./Smurf";
 
 const VillageList = props => {
   return (
-    <ul>
+    <div>
+        {console.log(props.smurfs)}
       {props.smurfs.map(smurf => {
-        return <Smurf key={smurf.id} 
+        return <Smurf key={smurf.name} 
         smurf={smurf} />;
       })}
-    </ul>
+    </div>
   );
 };
 

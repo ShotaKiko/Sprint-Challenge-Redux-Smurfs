@@ -8,14 +8,14 @@ import {
 } from '../actions';
 
 const initialState = {
-  smrufs: [],
+  smurfs: [],
   fetchingSmurfs: false,
   addingSmurf: false,
   error: null
 };
 
 function reducer(state = initialState, action) {
-  console.log('reducer', action);
+ 
   switch (action.type) {
     case FETCH_SMURFS_START:
       return {
@@ -26,7 +26,7 @@ function reducer(state = initialState, action) {
       return {
         ...state,
         fetchingSmurfs: false,
-        smrufs: [...state.smrufs, ...action.payload]
+        smurfs: [...state.smurfs, ...action.payload]
       };
     case FETCH_SMURFS_FAILURE:
       return {
