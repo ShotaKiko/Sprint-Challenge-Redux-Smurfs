@@ -7,7 +7,7 @@ const VillageList = props => {
     <div>
         {console.log(props.smurfs)}
       {props.smurfs.map(smurf => {
-        return <Smurf key={smurf.name} 
+        return <Smurf key={smurf.id} 
         smurf={smurf} />;
       })}
     </div>

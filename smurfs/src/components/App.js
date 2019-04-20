@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import ViewVillage from './ViewVillage';
+import SmurfSubmit from './SmurfSubmit';
 /*
  to wire this component up you're going to need a few things.
  I'll let you do this part on your own. 
@@ -14,7 +15,7 @@ class App extends Component {
       <div>
         <h1>Smurf Village</h1>
         <ViewVillage />
-        
+        <SmurfSubmit />
       </div>
     )
   }

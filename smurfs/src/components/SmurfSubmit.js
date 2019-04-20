@@ -22,13 +22,20 @@ class SmurfSubmit extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    
+    this.props.addSmurf(this.state.traits)
+        //  this.setState({
+        //     name:'',
+        //     age:"",
+        //     height:""
+        // })
   };
+
+  
 
   render() {
     return (
       <div>
-        <form onSubmit={this.addSmurf}>
+        <form onSubmit={this.handleSubmit}>
           <input
             onChange={this.handleInput}
             placeholder="name"
@@ -56,7 +63,9 @@ class SmurfSubmit extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    
+    smurfs:state.smurfs,
+    addingSmurf: state.addingSmurf,
+    error:state.error
   };
 };
 

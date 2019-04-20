@@ -35,7 +35,7 @@ const mapStateToProps = state => {
     smurfs: state.smurfs,
     error: state.error,
     fetchingSmurfs: state.fetchingSmurfs,
-    // addingSmurf: state.addingSmurf
+
   } 
 };
 console.log(this.smurfs)

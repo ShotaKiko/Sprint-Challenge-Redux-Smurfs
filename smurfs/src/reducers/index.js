@@ -44,7 +44,7 @@ function reducer(state = initialState, action) {
       return{
         ...state,
         addingSmurf:false,
-        smurfs: [...state.smurfs, ...action.payload]
+        smurfs: [...action.payload]
       }
     case POST_SMURF_FAILURE:
       return{
